@@ -27,10 +27,10 @@ export default function LandingPage({ onShowLogin }: LandingPageProps) {
       {/* Header with Login Button */}
       <header className="px-4 lg:px-6 h-14 flex items-center justify-between bg-white border-b">
         <Link className="flex items-center justify-center" href="#">
-          <PartyPopperIcon className="h-6 w-6 text-purple-600 mr-2" />
+          <PartyPopperIcon className="h-6 w-6 text-primary mr-2" />
           <span className="text-lg font-semibold text-gray-900">EventPlanner</span>
         </Link>
-        <Button onClick={onShowLogin} variant="ghost" className="text-purple-600 hover:bg-purple-50">
+        <Button onClick={onShowLogin} variant="outline">
           Login
         </Button>
       </header>
@@ -49,17 +49,19 @@ export default function LandingPage({ onShowLogin }: LandingPageProps) {
                   seamlessly.
                 </p>
               </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <Button asChild className="bg-white text-purple-700 hover:bg-gray-100">
-                  <Link href="#features">Explore Features</Link>
-                </Button>
-                <Button
-                  asChild
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-purple-700"
+              <div className="flex flex-col gap-4 min-[400px]:flex-row">
+                <Link
+                  href="#features"
+                  className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-lg font-bold text-purple-700 shadow-xl transition-all duration-300 hover:bg-gray-50 hover:text-purple-800 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-purple-600"
                 >
-                  <Link href="#">Try Demo</Link>
-                </Button>
+                  Explore Features
+                </Link>
+                <button
+                  onClick={onShowLogin}
+                  className="inline-flex items-center justify-center rounded-lg border-2 border-white bg-transparent px-8 py-4 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:bg-white hover:text-purple-700 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-purple-600"
+                >
+                  Try Demo
+                </button>
               </div>
             </div>
           </div>
@@ -79,7 +81,7 @@ export default function LandingPage({ onShowLogin }: LandingPageProps) {
                 {/* Feature: User Authentication */}
                 <Card className="flex flex-col">
                   <CardHeader>
-                    <LogInIcon className="h-8 w-8 text-purple-600 mb-2" />
+                    <LogInIcon className="h-8 w-8 text-primary mb-2" />
                     <CardTitle>User Authentication</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-1 flex flex-col justify-between">
@@ -99,7 +101,7 @@ export default function LandingPage({ onShowLogin }: LandingPageProps) {
                 {/* Feature: Event Management */}
                 <Card className="flex flex-col">
                   <CardHeader>
-                    <PlusCircleIcon className="h-8 w-8 text-purple-600 mb-2" />
+                    <PlusCircleIcon className="h-8 w-8 text-primary mb-2" />
                     <CardTitle>Event Management</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-1 flex flex-col justify-between">
@@ -119,7 +121,7 @@ export default function LandingPage({ onShowLogin }: LandingPageProps) {
                 {/* Feature: Guest & Group Management */}
                 <Card className="flex flex-col">
                   <CardHeader>
-                    <UsersIcon className="h-8 w-8 text-purple-600 mb-2" />
+                    <UsersIcon className="h-8 w-8 text-primary mb-2" />
                     <CardTitle>Guest & Group Management</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-1 flex flex-col justify-between">
@@ -139,7 +141,7 @@ export default function LandingPage({ onShowLogin }: LandingPageProps) {
                 {/* Feature: Guest Preferences */}
                 <Card className="flex flex-col">
                   <CardHeader>
-                    <SettingsIcon className="h-8 w-8 text-purple-600 mb-2" />
+                    <SettingsIcon className="h-8 w-8 text-primary mb-2" />
                     <CardTitle>Guest Preferences</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-1 flex flex-col justify-between">
@@ -159,7 +161,7 @@ export default function LandingPage({ onShowLogin }: LandingPageProps) {
                 {/* Feature: Collaborative Voting */}
                 <Card className="flex flex-col">
                   <CardHeader>
-                    <CheckCircleIcon className="h-8 w-8 text-purple-600 mb-2" />
+                    <CheckCircleIcon className="h-8 w-8 text-primary mb-2" />
                     <CardTitle>Collaborative Voting</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-1 flex flex-col justify-between">
@@ -179,7 +181,7 @@ export default function LandingPage({ onShowLogin }: LandingPageProps) {
                 {/* Feature: Accommodation Planning */}
                 <Card className="flex flex-col">
                   <CardHeader>
-                    <BedDoubleIcon className="h-8 w-8 text-purple-600 mb-2" />
+                    <BedDoubleIcon className="h-8 w-8 text-primary mb-2" />
                     <CardTitle>Accommodation Planning</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-1 flex flex-col justify-between">
@@ -199,7 +201,7 @@ export default function LandingPage({ onShowLogin }: LandingPageProps) {
                 {/* Feature: Activity Planning */}
                 <Card className="flex flex-col">
                   <CardHeader>
-                    <PartyPopperIcon className="h-8 w-8 text-purple-600 mb-2" />
+                    <PartyPopperIcon className="h-8 w-8 text-primary mb-2" />
                     <CardTitle>Activity Planning</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-1 flex flex-col justify-between">
@@ -219,7 +221,7 @@ export default function LandingPage({ onShowLogin }: LandingPageProps) {
                 {/* Feature: Event Overview */}
                 <Card className="flex flex-col">
                   <CardHeader>
-                    <BarChartIcon className="h-8 w-8 text-purple-600 mb-2" />
+                    <BarChartIcon className="h-8 w-8 text-primary mb-2" />
                     <CardTitle>Event Overview</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-1 flex flex-col justify-between">
@@ -239,7 +241,7 @@ export default function LandingPage({ onShowLogin }: LandingPageProps) {
                 {/* Feature: Share Event */}
                 <Card className="flex flex-col">
                   <CardHeader>
-                    <Share2Icon className="h-8 w-8 text-purple-600 mb-2" />
+                    <Share2Icon className="h-8 w-8 text-primary mb-2" />
                     <CardTitle>Share Event</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-1 flex flex-col justify-between">
@@ -259,7 +261,7 @@ export default function LandingPage({ onShowLogin }: LandingPageProps) {
                 {/* Feature: Offline-First */}
                 <Card className="flex flex-col">
                   <CardHeader>
-                    <WifiOffIcon className="h-8 w-8 text-purple-600 mb-2" />
+                    <WifiOffIcon className="h-8 w-8 text-primary mb-2" />
                     <CardTitle>Offline-First</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-1 flex flex-col justify-between">
@@ -292,12 +294,18 @@ export default function LandingPage({ onShowLogin }: LandingPageProps) {
               solutions like Supabase, Neon, or Upstash, and explore AI features for even smarter planning.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row justify-center">
-              <Button onClick={onShowLogin} className="bg-purple-600 text-white hover:bg-purple-700">
+              <button
+                onClick={onShowLogin}
+                className="inline-flex items-center justify-center rounded-lg bg-purple-600 px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:bg-purple-700 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+              >
                 Get Started Now
-              </Button>
-              <Button asChild variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-100">
-                <Link href="#">Learn More</Link>
-              </Button>
+              </button>
+              <Link
+                href="#"
+                className="inline-flex items-center justify-center rounded-lg border-2 border-purple-600 bg-transparent px-8 py-4 text-lg font-semibold text-purple-600 transition-all duration-300 hover:bg-purple-600 hover:text-white hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+              >
+                Learn More
+              </Link>
             </div>
           </div>
         </section>
